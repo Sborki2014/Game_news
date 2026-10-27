@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameNews — новости игроиндустрии</title>
+    <link rel="stylesheet" href="/static/style/style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Шапка -->
+        <header class="header">
+            <div class="header__brand">
+                <img
+                    class="header__logo"
+                    src="/static/images/Logo.png"
+                    alt="GameNews — логотип"
+                    width="48"
+                    height="48"
+                    loading="eager"
+                >
+                <div>
+                    <h1 class="header__title">GameNews<span class="header__title-accent"> / игроиндустрия</span></h1>
+                    <p class="header__subtitle">Свежие новости из мира видеоигр</p>
+                </div>
+            </div>
+            <div class="header__counter" id="newsCount">0 новостей</div>
+        </header>
+
+        <!-- Баннер -->
+        <section class="hero">
+            <img
+                class="hero__image"
+                src="/static/images/main-news.jpg"
+                alt="Игровой ПК с подсветкой и монитором"
+                width="1100"
+                height="300"
+                loading="lazy"
+            >
+            <div class="hero__overlay">
+                <h2 class="hero__title">Главное за неделю</h2>
+                <p class="hero__text">Подборка ключевых событий игровой индустрии</p>
+            </div>
+        </section>
+
+        <!-- Фильтры -->
+        <nav class="filters" id="filters" aria-label="Фильтр по категориям">
+            <button class="filter-btn filter-btn--active" data-category="all">Все</button>
+            <button class="filter-btn" data-category="PC">PC</button>
+            <button class="filter-btn" data-category="Консоли">Консоли</button>
+            <button class="filter-btn" data-category="Мобильные">Мобильные</button>
+            <button class="filter-btn" data-category="Инди">Инди</button>
+        </nav>
+
+        <!-- Сетка новостей -->
+        <main class="news-grid" id="newsGrid" aria-live="polite"></main>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <p>&copy; 2025 GameNews — демонстрационное приложение. Все новости вымышлены.</p>
+        </footer>
+    </div>
+
+    <script src="/static/script/app.js"></script>
+    <script src="/static/script/data.js"></script>
+</body>
+</html>
